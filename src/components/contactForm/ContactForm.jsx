@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { generate } from "shortid";
+import PropTypes from 'prop-types'
 import InputField from "../inputField/InputField";
 import {list} from "../../fields/fields"
 
@@ -30,10 +31,10 @@ class ContactForm extends Component {
     const { name, number } = this.state;
     return (
       <>
-        <form onSubmit={this.handleSubmit} className="form-control mb-3">
+        <form onSubmit={this.handleSubmit} className="form-control mb-3" >
           <InputField {...list.name} value={name} onChange={this.handleChange}/>
           <InputField {...list.number} value={number} onChange={this.handleChange}/>
-          <div class="col-12">
+          <div className="col-12">
             <button type="submit" className="btn btn-primary">
             Add contact
             </button>
@@ -44,3 +45,7 @@ class ContactForm extends Component {
   }
 }
 export default ContactForm;
+
+ContactForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+}

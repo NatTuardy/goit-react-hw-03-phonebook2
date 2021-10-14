@@ -5,7 +5,7 @@ const InputField = (props) => {
     return (
         <div className="mb-3">
             {data.label && <label htmlFor={data.id} className="form-label">{data.label }</label>}
-            <input {...data} />
+            <input {...data}  />
         </div>        
     )
 };
@@ -13,5 +13,5 @@ const InputField = (props) => {
 export default InputField;
 
 InputField.propTypes = {
-    props: PropTypes.object.isRequired,
+    props: PropTypes.object,
   }

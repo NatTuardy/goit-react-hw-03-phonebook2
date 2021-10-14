@@ -6,7 +6,9 @@ import Filter from "./components/filter/Filter";
 
 class App extends Component {
   state = {
-    contacts: [],
+    contacts: [
+      
+    ],
     filter: "",
   };
 
